@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.env
+
+# Model checkpoints (large)
+*.pt
+*.pth
+
+# Large API pull artifacts (regenerate with scripts/sofascore_full_pull.py)
+data/**/matches/*.json
+data/pl2526_full/events_list.json
+data/pl2526_full/*.log
+data/verify_batch/
+
+# Generated prediction runs (optional: remove line to track latest.txt)
+data/predictions/*.txt

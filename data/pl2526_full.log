@@ -1,0 +1,87 @@
+Fetching paginated match list…
+Listed 310 event rows, 310 unique match ids. HTTP calls so far: 12
+  [10/310] matchId=14023975 … HTTP total: 32
+  [20/310] matchId=14023985 … HTTP total: 52
+  [30/310] matchId=14023996 … HTTP total: 72
+  [40/310] matchId=14024015 … HTTP total: 92
+  [50/310] matchId=14025016 … HTTP total: 112
+  [60/310] matchId=14025038 … HTTP total: 132
+  [70/310] matchId=14025054 … HTTP total: 152
+  [80/310] matchId=14025064 … HTTP total: 172
+  [90/310] matchId=14025075 … HTTP total: 192
+  [100/310] matchId=14025087 … HTTP total: 212
+  [110/310] matchId=14025097 … HTTP total: 232
+  [120/310] matchId=14025107 … HTTP total: 252
+  [130/310] matchId=14025118 … HTTP total: 272
+  [140/310] matchId=14025128 … HTTP total: 292
+  [150/310] matchId=14025138 … HTTP total: 312
+  [160/310] matchId=14025149 … HTTP total: 332
+  [170/310] matchId=14025159 … HTTP total: 352
+  [180/310] matchId=14025169 … HTTP total: 372
+HTTP 429 Too Many Requests — back off or check quota.
+Fetching paginated match list…
+  HTTP 429, sleeping 5s (attempt 1/12)…
+  HTTP 429, sleeping 10s (attempt 2/12)…
+  HTTP 429, sleeping 20s (attempt 3/12)…
+  HTTP 429, sleeping 40s (attempt 4/12)…
+  HTTP 429, sleeping 80s (attempt 5/12)…
+Loading match list from events_list.json …
+Listed 310 event rows, 310 unique match ids. HTTP calls so far: 0
+Resume: skipping 189 matches already on disk, 121 remaining.
+  HTTP 429, sleeping 5s (attempt 1/12)…
+  HTTP 429, sleeping 10s (attempt 2/12)…
+  HTTP 429, sleeping 20s (attempt 3/12)…
+  HTTP 429, sleeping 40s (attempt 4/12)…
+  HTTP 429, sleeping 80s (attempt 5/12)…
+  HTTP 429, sleeping 120s (attempt 6/12)…
+  HTTP 429, sleeping 120s (attempt 7/12)…
+  HTTP 429, sleeping 120s (attempt 8/12)…
+  HTTP 429, sleeping 120s (attempt 9/12)…
+Loading match list from events_list.json …
+Listed 310 event rows, 310 unique match ids. HTTP calls so far: 0
+Resume: skipping 189 matches already on disk, 121 remaining.
+Traceback (most recent call last):
+  File "/home/pfactorial/Desktop/ball_gpt/scripts/sofascore_full_pull.py", line 274, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/pfactorial/Desktop/ball_gpt/scripts/sofascore_full_pull.py", line 238, in main
+    detail = http_get(
+             ^^^^^^^^^
+  File "/home/pfactorial/Desktop/ball_gpt/scripts/sofascore_full_pull.py", line 99, in http_get
+    with urllib.request.urlopen(req, timeout=90) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+Loading match list from events_list.json …
+Listed 310 event rows, 310 unique match ids. HTTP calls so far: 0
+Resume: skipping 189 matches already on disk, 121 remaining.
+  [10/121] matchId=14025189 … HTTP total: 20
+  [20/121] matchId=14025200 … HTTP total: 40
+  [30/121] matchId=14025211 … HTTP total: 60
+  [40/121] matchId=14025221 … HTTP total: 80
+  [50/121] matchId=14025232 … HTTP total: 100
+  [60/121] matchId=14025242 … HTTP total: 120
+  [70/121] matchId=14025253 … HTTP total: 140
+  [80/121] matchId=14025263 … HTTP total: 160
+  [90/121] matchId=14025273 … HTTP total: 180
+  [100/121] matchId=14025283 … HTTP total: 200
+  [110/121] matchId=14311407 … HTTP total: 220
+  [120/121] matchId=15238290 … HTTP total: 240
+  [121/121] matchId=15408501 … HTTP total: 242
+Done. Output: /home/pfactorial/Desktop/ball_gpt/data/pl2526_full  Total HTTP: 242
